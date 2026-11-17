@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon-Closure Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Epsilon-Closure Calculator</h1>
+        <p>Theory of Computation Project</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>1. Configure States</h2>
+
+            <label for="stateCount">Number of states (1–10)</label>
+
+            <div class="controls">
+                <input
+                    type="number"
+                    id="stateCount"
+                    min="1"
+                    max="10"
+                    value="4"
+                >
+                <button id="generateBtn">Generate Matrix</button>
+            </div>
+
+            <p class="hint">
+                Select ε, a, b, or digits 0–9 from each dropdown.
+                Use + to add multiple transitions between states.
+                A blank selection means no transition.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>2. Transition Matrix</h2>
+
+            <div id="matrixContainer"></div>
+
+            <button id="calculateBtn">Calculate ε-Closures</button>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="originalSection" class="panel" hidden>
+            <h2>3. Original Transition Diagram</h2>
+            <div id="originalDiagram"></div>
+        </section>
+
+        <section id="closureSection" class="panel" hidden>
+            <h2>4. Individual ε-Closures</h2>
+            <div id="closureResults"></div>
+        </section>
+
+        <section class="panel legend">
+            <h2>Color Legend</h2>
+            <p><span class="dot blue"></span> Starting state</p>
+            <p><span class="dot green"></span> Other states in the closure</p>
+            <p><span class="dot grey"></span> States outside the closure</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Epsilon-Closure Calculator | HTML, CSS, JavaScript & Electron</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

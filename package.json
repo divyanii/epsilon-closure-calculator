@@ -1,0 +1,30 @@
+{
+  "name": "toc-tae-1",
+  "version": "1.0.0",
+  "description": "A simple web application that calculates the **ε-closure of every state** in an ε-NFA using a transition matrix.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyani2005/epsilon-closure-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/divyani2005/epsilon-closure-calculator/issues"
+  },
+  "homepage": "https://github.com/divyani2005/epsilon-closure-calculator#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^8.0.1",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
